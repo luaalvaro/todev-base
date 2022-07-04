@@ -5,6 +5,9 @@ import { BsPlus } from 'react-icons/bs'
 import Header from '../components/Header'
 
 const Home = () => {
+
+  const [newTask, setNewTask] = React.useState("")
+
   return (
     <Box
       minHeight="100vh"
@@ -76,6 +79,8 @@ const Home = () => {
             border="none"
             background={styles.color.backgroundDark}
             height="45px"
+            value={newTask}
+            onChange={({ target }) => setNewTask(target.value)}
           />
         </InputGroup>
       </Flex>
