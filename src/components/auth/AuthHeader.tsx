@@ -1,6 +1,7 @@
 import { Flex, Link as A } from '@chakra-ui/react'
 import { styles } from '../../constants/styles'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 const AuthHeader = () => {
 
@@ -15,18 +16,23 @@ const AuthHeader = () => {
             gridGap="30px"
             borderBottom="1px solid rgba(255, 255, 255, 0.4)"
         >
-            <A
+            <Link
                 href="/login"
-                opacity={router.pathname === "/login" ? 1 : .7}
             >
-                Entrar
-            </A>
-            <A
-                href="/cadastro"
-                opacity={router.pathname === "/cadastro" ? 1 : .7}
-            >
-                Cadastre-se
-            </A>
+                <A
+                    opacity={router.pathname === "/login" ? 1 : .7}
+                >
+                    Entrar
+                </A>
+            </Link>
+
+            <Link href="/cadastro">
+                <A
+                    opacity={router.pathname === "/cadastro" ? 1 : .7}
+                >
+                    Cadastre-se
+                </A>
+            </Link>
         </Flex>
     )
 }

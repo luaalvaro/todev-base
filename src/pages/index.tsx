@@ -1,7 +1,6 @@
 import React from 'react'
 import { Box, Flex, Input, InputGroup, InputLeftElement, Text } from '@chakra-ui/react'
 import { styles } from '../constants/styles'
-import { BsPlus } from 'react-icons/bs'
 import Header from '../components/Header'
 
 const Home = () => {
@@ -72,8 +71,9 @@ const Home = () => {
             pointerEvents='none'
             color='#fff'
             fontSize='26px'
-            children={<BsPlus />}
-          />
+          >
+            +
+          </InputLeftElement>
           <Input
             placeholder='Adicionar uma tarefa'
             border="none"

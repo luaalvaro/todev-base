@@ -2,7 +2,7 @@ import React from 'react'
 import { Center, Flex } from '@chakra-ui/react'
 import Image from 'next/image'
 import LogoSm from '../../assets/todev-logo-sm.svg'
-import { FaUser } from 'react-icons/fa'
+import { GiExitDoor } from 'react-icons/gi'
 
 const Header = () => {
     return (
@@ -25,7 +25,7 @@ const Header = () => {
                 borderRadius="4px"
                 cursor="pointer"
             >
-                <FaUser
+                <GiExitDoor
                     color="#fff"
                 />
             </Center>
